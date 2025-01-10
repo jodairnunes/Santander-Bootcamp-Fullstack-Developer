@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
+import { CourseService } from '../../services/course.service';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-course-list',
@@ -8,30 +10,26 @@ import { Course } from './course';
 })
 export class CourseListComponent implements OnInit{
 
-  courses: Course[] = [];
-
-  ngOnInit(): void {
-      this.courses = [
-        {
-          id: 1,
-          name: 'Angular: Forms',
-          imageUrl: 'images/forms.png',
-          price: 99.99,
-          code: 'XPS-8796',
-          duration: 120,
-          rating: 4.5,
-          releaseDate: 'November, 4, 2019',
-        },
-        {
-          id: 2,
-          name: 'Angular: Http',
-          imageUrl: 'images/http.png',
-          price: 45.99,
-          code: 'LKL-1094',
-          duration: 120,
-          rating: 4,
-          releaseDate: 'November, 8, 2019',
-        },
-      ]
+  _courses: Course[] = [];
+  _filteredCourses: Course[] = [];
+  _filterBy: string = '';
+  
+  constructor(readonly courseService: CourseService, readonly config: NgbRatingConfig ) {
+    config.max = 5;
+		config.readonly = true;
   }
+  
+  ngOnInit(): void {
+    this._courses = this.courseService.retriveAll();
+    this._filteredCourses = this._courses;
+  }
+
+  set filter(value: string){
+    this._filterBy = value;
+    this._filteredCourses = this._courses.filter((course: Course) => course.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+  }
+
+  // get filter() {
+  //   return this._filterBy;
+  // }
 }
