@@ -9,7 +9,8 @@ import { CarrosselComponent } from './teste/carrossel/carrossel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReplacePipe } from './pipe/replace.pipe';
-import { NavbarComponent } from './navbar/navbar/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CourseInfoComponent } from './courses/course-info/course-info.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
     CarrosselComponent,
     ReplacePipe,
     NavbarComponent,
+    CourseInfoComponent,
   ],
   imports: [
     BrowserModule,

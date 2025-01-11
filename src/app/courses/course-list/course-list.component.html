@@ -28,7 +28,9 @@
 				<!-- <app-star [rating]="course.rating"></app-star> -->
 				<ngb-rating class="rating" [rate]="course.rating"/>
 			</td>
-			<td> ... </td>
+			<td>
+				<a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">Edit</a>
+			</td>
 		</tr>
 	</tbody>
 </table>
