@@ -21,9 +21,9 @@
 		<tr *ngFor="let course of _filteredCourses">
 			<td><img [src]="course.imageUrl" width="30" alt="icon-logo"></td>
 			<td>{{ course.name }}</td>
-			<td>{{ course.price }}</td>
-			<td>{{ course.code }}</td>
-			<td>{{ course.releaseDate }}</td>
+			<td>{{ course.price | currency: 'BRL'}}</td>
+			<td>{{ course.code | replace: '-' : ' ' | uppercase}}</td>
+			<td>{{ course.releaseDate | date: 'dd/MM/yyyy'}}</td>
 			<td>
 				<!-- <app-star [rating]="course.rating"></app-star> -->
 				<ngb-rating class="rating" [rate]="course.rating"/>

@@ -21,7 +21,7 @@ const COURSES: Course[] = [
       releaseDate: 'November 2, 2019',
       description: 'Neste curso, os alunos irão obter um grande conhecimento nos principais recursos do CLI.',
       duration: 120,
-      code: 'XLF-1212',
+      code: 'xls-1212',
       rating: 3,
       price: 12.99,
       imageUrl: '/images/cli.png',
