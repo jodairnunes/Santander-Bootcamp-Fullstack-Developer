@@ -9,6 +9,7 @@ import { CarrosselComponent } from './teste/carrossel/carrossel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReplacePipe } from './pipe/replace.pipe';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReplacePipe } from './pipe/replace.pipe';
     StarComponent,
     CarrosselComponent,
     ReplacePipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
