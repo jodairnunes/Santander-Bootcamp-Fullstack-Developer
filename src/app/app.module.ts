@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CourseInfoComponent } from './courses/course-info/course-info.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { CourseInfoComponent } from './courses/course-info/course-info.component
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
