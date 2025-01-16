@@ -32,6 +32,10 @@ export class CourseService {
       return this.http.post<Course>(this.urlApi, course)
     }
   }
+
+  deleteById(id: number): Observable<any>{
+    return this.http.delete<any>(`${this.urlApi}/${id}`);
+  }
 }
 
 
