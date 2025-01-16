@@ -9,9 +9,9 @@ import { CarrosselComponent } from './teste/carrossel/carrossel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReplacePipe } from './shared/pipe/replace.pipe';
-import { NavbarComponent } from './navbar/navbar.component';
 import { CourseInfoComponent } from './courses/course-info/course-info.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -21,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     StarComponent,
     CarrosselComponent,
     ReplacePipe,
-    NavbarComponent,
     CourseInfoComponent,
   ],
   imports: [
@@ -29,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
